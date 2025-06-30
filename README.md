@@ -2,4 +2,4 @@
 
 escribanme por wa para agregarles al repo
 
-probrando
+ya probe xD
