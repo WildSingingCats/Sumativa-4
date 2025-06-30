@@ -1,6 +1,7 @@
 #include <iostream>
 #include "headers/utils.h" //utilities header
 #include "headers/oper.h"  //operations header
+#include "headers/menus.h" //menus header
 
 using namespace std;
 //  TODO: Menus.h :D
