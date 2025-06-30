@@ -1,6 +1,7 @@
-#include <iostream>
 #ifndef UTILS_H
 #define UTILS_H
+
+#include <iostream>
 // Utilidades para el programa
 // Aqui se pueden definir funciones utilitarias que se utilizaran en el programa, como por ejemplo:
 // una funcion para pausar la ejecucion del programa y esperar a que el usuario presione Enter.
