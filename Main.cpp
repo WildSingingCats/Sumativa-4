@@ -3,7 +3,7 @@
 #include <chrono>
 #include "headers/utils.h" //utilities header
 #include "headers/oper.h"  //operations header
-#include "headers/menus.h" //menus header
+#include "headers/menu.h" //menu's header
 
 using namespace std;
 //  TODO: Menus.h :D
@@ -37,13 +37,13 @@ int main (){
 
         switch(opcion_principal()) { // Call the main menu function
             case 1: // If the user chooses option 1
-                operacion(); // Call the operation function
+                cout << "operacion" << endl; // Call the operation function
                 break; 
             case 2: // If the user chooses option 2
-                inventario(); // Call the inventory function
+                cout << "inventario" << endl; // Call the inventory function
                 break; 
             case 3: // If the user chooses option 3
-                factura(); // Call the invoice function
+                cout << "factura" << endl; // Call the invoice function
                 break;
             case 0: // If the user chooses to exit
                 cout << "Saliendo del programa..." << endl; // Print exit message
