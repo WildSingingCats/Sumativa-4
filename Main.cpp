@@ -5,8 +5,6 @@
 #include "headers/oper.h"  //operations header
 #include "headers/menu.h" //menu's header
 
-using namespace std;
-//  TODO: Menus.h :D
 //  TODO: Gestion de inventario, agregar y quitar items, porder modificar libremente.
 //  TODO: modificar inventario a traver de contraseña (investigar), comtraseña de administrador.
 //  TODO: hacer un sistema de facturacion con iva, el iva se calcula por cada producto individualy luego se suma (16%) 
@@ -17,7 +15,7 @@ using namespace std;
 //  De momento no he hecho nada, pero aqui estamos jajaja
 //  por favor, documenten el codigo, es importante para que todos podamos entenderlo.
 //  Tambien coloque el projecto en github, por si quieren ver el codigo desde ahi.
-//  https://github.com/WildSingingCats/Sumativa-4
+//  https://github.com/WildSingingCats/Sumativa-4 .
 //  escribanme por WS, dandome su usario de github, para agregarlos al proyecto. :D
 
 //  Chuleta:    pause(); // pause desde utils.h
@@ -29,27 +27,28 @@ int main (){
     do{ 
         cin >> opcion_principal;
         cls();
-        std::cout << "cargando..." << std::endl; // Print loading message
+        std::cout << "Cargando...\n\nPor Favor espere..." << std::endl; // Print loading message
         std::this_thread::sleep_for(std::chrono::seconds(3));
+        cls();
         menu_inicio():
         menu1();
         menu_final();
 
         switch(opcion_principal()) { // Call the main menu function
             case 1: // If the user chooses option 1
-                cout << "operacion" << endl; // Call the operation function
+                std::cout << "operacion" << std::endl;
                 break; 
             case 2: // If the user chooses option 2
-                cout << "inventario" << endl; // Call the inventory function
+                std::cout << "inventario" << std::endl;
                 break; 
             case 3: // If the user chooses option 3
-                cout << "factura" << endl; // Call the invoice function
+                std::cout << "factura" << std::endl;
                 break;
             case 0: // If the user chooses to exit
-                cout << "Saliendo del programa..." << endl; // Print exit message
+                std::cout << "Saliendo del programa..." << std::endl;
                 break; t
             default: // If the user enters an invalid option
-                cout << "Opcion invalida, por favor intente de nuevo." << endl; // Print error message
+                std::cout << "Opcion invalida, por favor intente de nuevo." << std::endl;
         }
     }while(opcion_principal() != 0); // Call the main menu function until the user chooses to exit
 }

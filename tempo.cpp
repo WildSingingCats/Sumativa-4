@@ -10,6 +10,7 @@
 // ejemplo de forma:
 // std::cout << ejemplo" << std::endl;
 // igual vs code te corrige casi que todo, asi que no hay problema
+// creo que no a ser necesario pero por sia aqui está :D
 
 int main(){
 
