@@ -2,6 +2,7 @@
 #include "headers/utils.h" 
 #include "headers/menu.h"
 #include "headers/oper.h"
+#include <tempo.ccpp> // este es un cpp de prueba para probar y luego impremental al main.cpp, para no hacer explotar nada
 
 
 // esta es un cpp de prueba para probar y luego impremental al main.cpp, para no hacer explotar nada

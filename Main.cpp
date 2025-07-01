@@ -1,4 +1,6 @@
 #include <iostream>
+#include <thread>
+#include <chrono>
 #include "headers/utils.h" //utilities header
 #include "headers/oper.h"  //operations header
 #include "headers/menus.h" //menus header
@@ -18,7 +20,36 @@ using namespace std;
 //  https://github.com/WildSingingCats/Sumativa-4
 //  escribanme por WS, dandome su usario de github, para agregarlos al proyecto. :D
 
+//  Chuleta:    pause(); // pause desde utils.h
+//              cls();   // Limpia cmd desde utils.h
+
+// estos son placeholders nada completo todavia, pero es un buen comienzo
 int main (){
-    pause(); // Call the utility function from utils.h
-    return 0;
+    int opcion_principal = 0;
+    do{ 
+        cin >> opcion_principal;
+        cls();
+        std::cout << "cargando..." << std::endl; // Print loading message
+        std::this_thread::sleep_for(std::chrono::seconds(3));
+        menu_inicio():
+        menu1();
+        menu_final();
+        
+        switch(opcion_principal()) { // Call the main menu function
+            case 1: // If the user chooses option 1
+                operacion(); // Call the operation function
+                break; // Exit the switch statement
+            case 2: // If the user chooses option 2
+                inventario(); // Call the inventory function
+                break; // Exit the switch statement
+            case 3: // If the user chooses option 3
+                factura(); // Call the invoice function
+                break; // Exit the switch statement
+            case 0: // If the user chooses to exit
+                cout << "Saliendo del programa..." << endl; // Print exit message
+                break; // Exit the switch statement
+            default: // If the user enters an invalid option
+                cout << "Opcion invalida, por favor intente de nuevo." << endl; // Print error message
+        }
+    }while(opcion_principal() != 0); // Call the main menu function until the user chooses to exit
 }
