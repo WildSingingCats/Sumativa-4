@@ -51,7 +51,7 @@ int main (){
 
             case 3: // inventario (clave de administrador)
                 cls();
-                validar_clave(clave_gerente, clave); // funcion que valida la clave de gerente
+                ingresar_clave(clave);                                              // funcion que valida la clave de gerente
                 cls();
                 std::cout << "Validando...\n\nPor Favor espere..." << std::endl;    // falsa carga de 1 segundo
                 sleep(1);                                                           // carga falsa de 1 segundo, es solo para mantener el flow del programa :D     

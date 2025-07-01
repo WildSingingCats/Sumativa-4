@@ -25,7 +25,7 @@ inline void sleep(int seconds) {
     // Esta funcion pausa la ejecucion del programa por un numero de segundos especificado.
     std::this_thread::sleep_for(std::chrono::seconds(seconds));
 }
-inline void validar_clave (std::string clave_gerente , std::string clave) {
+inline void ingresar_clave (std::string clave) {
                 // Esta funcion valida la clave de gerente ingresada por el usuario.
                 std::cout << "Ingrese la clave de Gerente: ";
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Limpiar el buffer antes de getline, si no, explota
