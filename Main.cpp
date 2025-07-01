@@ -17,6 +17,8 @@
 
 //  Chuleta:    pause(); // pause desde utils.h
 //              cls();   // Limpia cmd desde utils.h
+//              sleep(1); // pausa de 1 segundo desde utils.h
+//              validar_clave(clave_gerente, clave); // valida la clave de gerente desde utils.h
 
 // estos son placeholders nada completo todavia
 
