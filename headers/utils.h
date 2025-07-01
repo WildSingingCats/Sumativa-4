@@ -25,10 +25,17 @@ inline void sleep(int seconds) {
     // Esta funcion pausa la ejecucion del programa por un numero de segundos especificado.
     std::this_thread::sleep_for(std::chrono::seconds(seconds));
 }
-inline void ingresar_clave (std::string clave) {
-                // Esta funcion ingresa la clave de gerente
-                std::cout << "Ingrese la clave de Gerente: ";
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Limpiar el buffer antes de getline, si no, explota
-                std::getline(std::cin, clave );
+inline void ingresar_clave (std::string& clave) {
+    // Esta funcion ingresa la clave de gerente
+    std::cout << "Ingrese la clave de Gerente: ";
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Limpiar el buffer antes de getline, si no, explota
+    std::getline(std::cin, clave ); 
+}
+inline int verificacion_clave(std::string& a , std::string& b) {
+    if (a == b) {
+        return 1; // Retorna 1 si la clave es correcta
+    } else {
+        return 0; // Retorna 0 si la clave es incorrecta
+    }
 }
 #endif // UTILS_H

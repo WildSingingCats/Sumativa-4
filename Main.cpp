@@ -3,9 +3,9 @@
 #include <thread> // for sleep functionality
 #include <chrono>  // for sleep functionality
 #include <limits> // for std::numeric_limits
-#include "headers/utils.h" //utilities header
-#include "headers/oper.h"  //operations header
-#include "headers/menu.h" //menu's header
+#include "headers/utils.h" //utilitidades header
+#include "headers/oper.h"  //operaciones header
+#include "headers/menu.h" //menus header
 
 //  TODO: Gestion de inventario, agregar y quitar items, poder modificar libremente.
 //  TODO: hacer un sistema de facturacion con iva, el iva se calcula por cada producto individualy luego se suma (16%) 
@@ -17,48 +17,50 @@
 
 //  Chuleta:    pause(); // pause desde utils.h
 //              cls();   // Limpia cmd desde utils.h
-//              sleep(1); // pausa de 1 segundo desde utils.h
-//              validar_clave(clave_gerente, clave); // valida la clave de gerente desde utils.h
 
 // estos son placeholders nada completo todavia
 
 int main (){
-    const std::string clave_gerente = "rasputin1234"; 
     std::string clave;
-    int opcionP = 0; // variable selector principal del menu
-    int opcionI = 0; // variable selector del menu de inventario
+    std::string clave_gerente = "rasputin1234"; 
+    int opcion_principal; // variable selector principal del menu
+    int opcion_inventario; // variable selector del menu de inventario
+    int opcion_item;
+    int opcion_facturar;
 
     do{ 
-
-        menu_inicio();
+        cls();
         menu_principal();
-        menu_final();
-        cin >> opcionP;
+        std::cin >> opcion_principal;
         cls();
         std::cout << "Cargando...\n\nPor Favor espere..." << std::endl;
         sleep(1);   // carga falsa de 1 segundo, es solo para mantener el flow del programa :D
-        cls();      // clear the console screen                   
-        switch(opcionP) {
-            case 1: // ingresar o quitar(clave) items para facturar
-
+        cls();                 
+        switch(opcion_principal) {
+            case 1:{ //ingresar o quitar items para facturar
                 std::cout << "facturar" << std::endl; // placeholder, aqui iria la funcion de facturar
                 break; 
-
-            case 2: // facturar (calcular iva y suma final)
+            }
+            case 2:{// facturar (calcular iva y suma final)
 
                 std::cout << "inventario" << std::endl;
                 break; 
-
-            case 3: // inventario (clave de administrador)
+            }
+            case 3:{ // inventario ( solicita clave de administrador)
                 cls();
-                ingresar_clave(clave);                                              // funcion que ingresa la clave de gerente
+                std::cout << "Ingrese la clave de Gerente: ";
+                ingresar_clave(clave); // funcion que valida la clave de gerente (solo para la clave esperada)
                 cls();
                 std::cout << "Validando...\n\nPor Favor espere..." << std::endl;    // falsa carga de 1 segundo
-                sleep(1);                                                           // carga falsa de 1 segundo, es solo para mantener el flow del programa :D     
+                sleep(1);    
+                bool clave_valida = verificacion_clave(clave , clave_gerente); // funcion que verifica la clave ingresada
                 cls();
-                if (clave == clave_gerente) {                                       // Se accede al inventario si =true
+                if (clave_valida == true) {                                       // Se accede al inventario
                     std::cout << "Clave correcta. Acceso concedido." << std::endl;
+
                     // funcion de inventario, que se encargara de mostrar el inventario y permitir agregar o quitar items
+                        //aqui va inventario
+                        //TODO: inventario.h
 
                 } else {
                     std::cout << "Clave incorrecta. Acceso denegado." << std::endl;
@@ -66,9 +68,8 @@ int main (){
                     pause(); 
                     cls();  
                 }
-
+            }
                 break;
-
             case 0: // salida
                 std::cout << "Saliendo del programa..." << std::endl;
                 break; 
@@ -76,8 +77,9 @@ int main (){
             default: // error
 
                 std::cout << "Opcion invalida, por favor intente de nuevo." << std::endl;
+                break;
         }
-        }while(opcionP != 0); // Call the main menu function until the user chooses to exit
+    }while(opcion_principal != 0); //cierra do while y los switch case
 
     return 0; // exit the program
 }

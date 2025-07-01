@@ -4,17 +4,21 @@
 using namespace std;
 #include <iostream>
 
-void menu_inicio (){
-    cout << "<-----------------------Menu----------------------->\n";
-}
-void menu_final (){
-    cout << "<-------------------------------------------------->\n";
-} 
+ 
 void menu_principal (){
-    cout << "1.- < Ingresar-O-Quitar-items-para-facturar        >\n";
-    cout << "2.- < Facturar                                     >\n";                            
-    cout << "3.- < Inventario-(requiere-clave-de-supervisor)    >\n";
-    cout << "0.- < Cerrar el Programa                           >\n";
+    cout << "|--->-<----------------------------------------------|\n";
+    cout << "|   >-<               MENU PRINCIPAL                 |\n";
+    cout << "|--->-<----------------------------------------------|\n";
+    cout << "|   >-<                                              |\n";
+    cout << "| 1 >-< Ingresar-O-Quitar-items-para-facturar        |\n";
+    cout << "|   >-<                                              |\n";
+    cout << "| 2 >-< Facturar                                     |\n";
+    cout << "|   >-<                                              |\n";                            
+    cout << "| 3 >-< Inventario (Requiere clave de Gerente)       |\n";
+    cout << "|   >-<                                              |\n";
+    cout << "| 0 >-< Cerrar el Programa                           |\n";
+    cout << "|   >-<                                              |\n";
+    cout << "|--->-<----------------------------------------------|\n";
 }
 void menu_inventario (){
     cout << "a \n";
