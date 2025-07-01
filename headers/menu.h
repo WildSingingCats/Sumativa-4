@@ -1,25 +1,29 @@
+// File: headers/menu.h
 #ifndef MENU_H
 #define MENU_H
 using namespace std;
 #include <iostream>
-#include <string>
 
 void menu_inicio (){
-    cout << "<-------------------Menu------------------->" << endl;
+    cout << "<-----------------------Menu----------------------->\n";
 }
 void menu_final (){
-    cout << "<------------------------------------------>" << endl;
+    cout << "<-------------------------------------------------->\n";
 } 
-void menu1 (){
-   cout << "1.- Facturar" << endl;
-   cout << "2.- ejemplo" << endl;
-   cout << "3.- ejemplo" << endl;
-   cout << "4.- ejemplo" << endl;
-   cout << "0.- Salir" << endl;
+void menu_principal (){
+    cout << "1.- < Ingresar-O-Quitar-items-para-facturar        >\n";
+    cout << "2.- < Facturar                                     >\n";                            
+    cout << "3.- < Inventario-(requiere-clave-de-supervisor)    >\n";
+    cout << "0.- < Cerrar el Programa                           >\n";
 }
-void menu2 (){
-    cout << "" << endl;
-    cout << "" << endl;
-    cout << "" << endl;
+void menu_inventario (){
+    cout << "a \n";
+    cout << "a \n";
+    cout << "a \n";
+}
+void menu_items (){
+    cout << "b \n";
+    cout << "b \n";
+    cout << "b \n";
 }
 #endif // MENU_H
