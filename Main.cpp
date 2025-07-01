@@ -34,20 +34,20 @@ int main (){
         menu_inicio():
         menu1();
         menu_final();
-        
+
         switch(opcion_principal()) { // Call the main menu function
             case 1: // If the user chooses option 1
                 operacion(); // Call the operation function
-                break; // Exit the switch statement
+                break; 
             case 2: // If the user chooses option 2
                 inventario(); // Call the inventory function
-                break; // Exit the switch statement
+                break; 
             case 3: // If the user chooses option 3
                 factura(); // Call the invoice function
-                break; // Exit the switch statement
+                break;
             case 0: // If the user chooses to exit
                 cout << "Saliendo del programa..." << endl; // Print exit message
-                break; // Exit the switch statement
+                break; t
             default: // If the user enters an invalid option
                 cout << "Opcion invalida, por favor intente de nuevo." << endl; // Print error message
         }
