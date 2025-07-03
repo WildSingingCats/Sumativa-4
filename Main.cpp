@@ -65,21 +65,7 @@ int main (){
                         //TODO: inventario.h
                     do {
                         cls();
-                        std::cout << "|--->-<----------------------------------------------|\n";
-                        std::cout << "|   >-<               MENU INVENTARIO                |\n";
-                        std::cout << "|--->-<----------------------------------------------|\n";
-                        std::cout << "|   >-<                                              |\n";
-                        std::cout << "| 1 >-< Agregar item al inventario                  |\n";
-                        std::cout << "|   >-<                                              |\n";
-                        std::cout << "| 2 >-< Eliminar item del inventario                 |\n";
-                        std::cout << "|   >-<                                              |\n";                         
-                        std::cout << "| 3 >-< Mostrar Inventario                           |\n";
-                        std::cout << "|   >-<                                              |\n";
-                        std::cout << "| 0 >-< Volver al menu principal                     |\n";
-                        std::cout << "|   >-<                                              |\n";
-                        std::cout << "|--->-<----------------------------------------------|\n";
-                        std::cout << "Seleccione una opcion: ";
-
+                        menu_inventario(); // muestra el menu de inventario
                         std::cin >> opcion_inventario;
                         cls();
                         switch(opcion_inventario) {

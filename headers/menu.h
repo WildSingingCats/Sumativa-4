@@ -21,13 +21,25 @@ void menu_principal (){
     cout << "|--->-<----------------------------------------------|\n";
 }
 void menu_inventario (){
-    cout << "a \n";
-    cout << "a \n";
-    cout << "a \n";
+    cout << "|--->-<----------------------------------------------|\n";
+    cout << "|   >-<               MENU INVENTARIO                |\n";
+    cout << "|--->-<----------------------------------------------|\n";
+    cout << "|   >-<                                              |\n";
+    cout << "| 1 >-< Agregar item al inventario                   |\n";
+    cout << "|   >-<                                              |\n";
+    cout << "| 2 >-< Eliminar item del inventario                 |\n";
+    cout << "|   >-<                                              |\n";                         
+    cout << "| 3 >-< Mostrar Inventario                           |\n";
+    cout << "|   >-<                                              |\n";
+    cout << "| 0 >-< Volver al menu principal                     |\n";
+    cout << "|   >-<                                              |\n";
+    cout << "|--->-<----------------------------------------------|\n";
 }
 void menu_items (){
     cout << "b \n";
     cout << "b \n";
     cout << "b \n";
 }
+
+
 #endif // MENU_H
