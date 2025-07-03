@@ -3,6 +3,7 @@
 #include <thread> // for sleep functionality
 #include <chrono>  // for sleep functionality
 #include <limits> // for std::numeric_limits
+#include <vector> // for vector operations
 #include "headers/utils.h" //utilitidades header
 #include "headers/oper.h"  //operaciones header
 #include "headers/menu.h" //menus header
@@ -25,8 +26,9 @@ int main (){
     std::string clave_gerente = "rasputin1234"; 
     int opcion_principal; // variable selector principal del menu
     int opcion_inventario; // variable selector del menu de inventario
-    int opcion_item;
-    int opcion_facturar;
+    int opcion_item; // variable selector del menu de items
+    int opcion_facturar; // variable selector del menu de facturacion
+
 
     do{ 
         cls();
@@ -61,9 +63,53 @@ int main (){
                     // funcion de inventario, que se encargara de mostrar el inventario y permitir agregar o quitar items
                         //aqui va inventario
                         //TODO: inventario.h
+                    do {
+                        cls();
+                        std::cout << "|--->-<----------------------------------------------|\n";
+                        std::cout << "|   >-<               MENU INVENTARIO                |\n";
+                        std::cout << "|--->-<----------------------------------------------|\n";
+                        std::cout << "|   >-<                                              |\n";
+                        std::cout << "| 1 >-< Agregar item al inventario                  |\n";
+                        std::cout << "|   >-<                                              |\n";
+                        std::cout << "| 2 >-< Eliminar item del inventario                 |\n";
+                        std::cout << "|   >-<                                              |\n";                         
+                        std::cout << "| 3 >-< Mostrar Inventario                           |\n";
+                        std::cout << "|   >-<                                              |\n";
+                        std::cout << "| 0 >-< Volver al menu principal                     |\n";
+                        std::cout << "|   >-<                                              |\n";
+                        std::cout << "|--->-<----------------------------------------------|\n";
+                        std::cout << "Seleccione una opcion: ";
+
+                        std::cin >> opcion_inventario;
+                        cls();
+                        switch(opcion_inventario) {
+                            case 1: // agregar item al inventario
+                                std::cout << "Agregando item al inventario..." << std::endl;
+                                agregarItem(inventario); // funcion que agrega un item al inventario
+                                pause(); // pausa para que el usuario pueda ver el mensaje
+                                break; 
+                            case 2: // quitar item del inventario
+                                std::cout << "Quitando item del inventario..." << std::endl;
+                                quitarItem(inventario); // funcion que quita un item del inventario
+                                pause(); // pausa para que el usuario pueda ver el mensaje
+                                break; 
+                            case 3: // mostrar inventario
+                                std::cout << "Mostrando inventario..." << std::endl;
+                                mostrarInventario(inventario); // funcion que muestra el inventario
+                                pause(); // pausa para que el usuario pueda ver el mensaje
+                                break;
+                            case 0: // volver al menu principal
+                                std::cout << "Volviendo al menu principal..." << std::endl;
+                                break; 
+                            default: // error
+                                std::cout << "Opcion invalida, por favor intente de nuevo." << std::endl;
+                                pause(); // pausa para que el usuario pueda ver el mensaje
+                                break;
+                        }
+                    } while(opcion_inventario != 0); // cierra el do while del menu de inventario
 
                 } else {
-                    std::cout << "Clave incorrecta. Acceso denegado." << std::endl;
+                    std::cout << "Clave incorrecta. Acceso denegado." << std::endl; 
                     std::cout << "Comuniquese con el Gerente..." << std::endl;
                     pause(); 
                     cls();  

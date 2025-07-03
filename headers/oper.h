@@ -49,5 +49,47 @@ void quitarItem(std::vector<Item>& inventario) { // Declaramos la funcion que re
     std::cout << "Item no encontrado en el inventario." << std::endl;
 }
 // Función para mostrar el inventario
-   
+void mostrarInventario(const std::vector<Item>& inventario) { // Declaramos la funcion que recibe un vector de items
+    std::cout << "Inventario:" << std::endl;  
+    for (const auto& item : inventario) {  // Iteramos sobre cada item en el vector
+        std::cout << "Nombre: " << item.nombre
+                  << ", Cantidad: " << item.cantidad
+                  << ", Precio: " << item.precio << std::endl;
+    }
+}
+// Función para modificar un item del inventario
+void modificarItem(std::vector<Item>& inventario) { // Declaramos la funcion que recibe un vector de items
+    std::string nombre;                            // Variable para almacenar el nombre del item a modificar
+    std::cout << "Ingrese el nombre del item a modificar: ";
+    std::cin >> nombre;
+
+    for (auto& item : inventario) {  // Iteramos sobre cada item en el vector
+        if (item.nombre == nombre) {  
+            std::cout << "Ingrese la nueva cantidad: ";
+            std::cin >> item.cantidad;
+            std::cout << "Ingrese el nuevo precio: ";
+            std::cin >> item.precio;
+            std::cout << "Item modificado." << std::endl;
+            return;
+        }
+    }
+    std::cout << "Item no encontrado en el inventario." << std::endl;   
+} 
+// Función para buscar un item en el inventario
+void buscarItem(const std::vector<Item>& inventario) { // Declaramos la funcion que recibe un vector de items
+    std::string nombre;                               // Variable para almacenar el nombre del item a buscar
+    std::cout << "Ingrese el nombre del item a buscar: ";
+    std::cin >> nombre;
+
+    for (const auto& item : inventario) {  // Iteramos sobre cada item en el vector
+        if (item.nombre == nombre) {
+            std::cout << "Item encontrado: "
+                      << "Nombre: " << item.nombre
+                      << ", Cantidad: " << item.cantidad
+                      << ", Precio: " << item.precio << std::endl;
+            return;
+        }
+    }
+    std::cout << "Item no encontrado en el inventario." << std::endl;
+}
 #endif // OPER_H
