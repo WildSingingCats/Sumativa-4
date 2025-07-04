@@ -72,20 +72,23 @@ int main (){
                             case 1: // agregar item al inventario
                                 std::cout << "Agregando item al inventario..." << std::endl;
                                 agregarItem(inventario); // funcion que agrega un item al inventario
-                                pause(); // pausa para que el usuario pueda ver el mensaje
+                                sleep(1); // pausa para que el usuario pueda ver el mensaje
                                 break; 
                             case 2: // quitar item del inventario
                                 std::cout << "Quitando item del inventario..." << std::endl;
                                 quitarItem(inventario); // funcion que quita un item del inventario
-                                pause(); // pausa para que el usuario pueda ver el mensaje
+                                sleep(1); // pausa para que el usuario pueda ver el mensaje
                                 break; 
                             case 3: // mostrar inventario
                                 std::cout << "Mostrando inventario..." << std::endl;
                                 mostrarInventario(inventario); // funcion que muestra el inventario
-                                pause(); // pausa para que el usuario pueda ver el mensaje
+                                sleep(5); // pausa para que el usuario pueda ver el mensaje
                                 break;
                             case 0: // volver al menu principal
                                 std::cout << "Volviendo al menu principal..." << std::endl;
+                                sleep(1); // pausa para que el usuario pueda ver el mensaje
+                                cls(); // limpia la pantalla
+                                menu_principal(); // vuelve al menu principal
                                 break; 
                             default: // error
                                 std::cout << "Opcion invalida, por favor intente de nuevo." << std::endl;
