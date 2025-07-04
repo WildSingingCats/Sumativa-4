@@ -1,5 +1,5 @@
 // File: headers/oper.h
-#ifndef OPER_H
+#ifndef 
 #define OPER_H
 #include <iostream>
 #include <string>
@@ -18,8 +18,8 @@ struct Item {
 
 // Vector para almacenar los items del inventario
 std::vector<Item> inventario;
+
 // Función para agregar un item al inventario
-// vector
 void agregarItem(std::vector<Item>& inventario){ //declaramos la funcion que recibe un vector de items
     Item nuevoItem; // Creamos un nuevo item
     std::cout << "Ingrese el nombre del item: "; 
@@ -48,40 +48,15 @@ void quitarItem(std::vector<Item>& inventario) { // Declaramos la funcion que re
     }
     std::cout << "Item no encontrado en el inventario." << std::endl;
 }
-// Función para mostrar el inventario
-void mostrarInventario(const std::vector<Item>& inventario) { // Declaramos la funcion que recibe un vector de items
-    std::cout << "Inventario:" << std::endl;  
-    for (const auto& item : inventario) {  // Iteramos sobre cada item en el vector
-        std::cout << "Nombre: " << item.nombre
-                  << ", Cantidad: " << item.cantidad
-                  << ", Precio: " << item.precio << std::endl;
-    }
-}
-// Función para modificar un item del inventario
-void modificarItem(std::vector<Item>& inventario) { // Declaramos la funcion que recibe un vector de items
-    std::string nombre;                            // Variable para almacenar el nombre del item a modificar
-    std::cout << "Ingrese el nombre del item a modificar: ";
-    std::cin >> nombre;
 
-    for (auto& item : inventario) {  // Iteramos sobre cada item en el vector
-        if (item.nombre == nombre) {  
-            std::cout << "Ingrese la nueva cantidad: ";
-            std::cin >> item.cantidad;
-            std::cout << "Ingrese el nuevo precio: ";
-            std::cin >> item.precio;
-            std::cout << "Item modificado." << std::endl;
-            return;
-        }
-    }
-    std::cout << "Item no encontrado en el inventario." << std::endl;   
-} 
-// Función para buscar un item en el inventario
-void buscarItem(const std::vector<Item>& inventario) { // Declaramos la funcion que recibe un vector de items
-    std::string nombre;                               // Variable para almacenar el nombre del item a buscar
+
+// Función para mostrar el inventario
+void mostrarInventario(const std::vector<Item>& inventario) {
+    std::string nombre; // Variable para almacenar el nombre del item a buscar
     std::cout << "Ingrese el nombre del item a buscar: ";
     std::cin >> nombre;
 
-    for (const auto& item : inventario) {  // Iteramos sobre cada item en el vector
+    for (const auto& item : inventario) { // Iteramos sobre cada item en el vector
         if (item.nombre == nombre) {
             std::cout << "Item encontrado: "
                       << "Nombre: " << item.nombre
@@ -92,4 +67,28 @@ void buscarItem(const std::vector<Item>& inventario) { // Declaramos la funcion 
     }
     std::cout << "Item no encontrado en el inventario." << std::endl;
 }
+// Función para pausar la ejecución del programa
+void pause() { 
+    std::cout << "Presione Enter para continuar...";
+    std::cin.ignore(); //funcion 
+    std::cin.get();
+}   
+
+// Funcion para facturar con el 16% de IVA
+// Esta funcion recibe un vector de items y calcula el total de la factura, mostrando cada item
+void facturar(const std::vector<Item>& inventario){
+    double total = 0.0;
+    std::cout << "Factura:" << std::endl; 
+    for (const auto& item : inventario) {
+        double subtotal = item.precio * item.cantidad;
+        std::cout << "Item: " << item.nombre << ", Cantidad: " << item.cantidad << ", Precio: " << item.precio << ", Subtotal: " << subtotal << std::endl;
+        total += subtotal; // Acumulamos el subtotal al total
+    }
+    std::cout << "Total: " << total << std::endl;
+    double iva = total * 0.16; // Calculamos el IVA al 16%
+    std::cout << "IVA (16%): " << iva << std::endl;
+    std::cout << "Total con IVA: " << total + iva << std::endl;
+}
+
+
 #endif // OPER_H

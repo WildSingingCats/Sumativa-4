@@ -4,11 +4,13 @@
 - Se desarrollo la base del programa
 
 falta:
-    -inventario
     -factura
+
     -cuenta
+
     -exportar txt
 
 si es posible:
     -guardar informacion incluso si se cierra el programa (guardas archivos)
+
     -alguna funcion adicional que sea necesaria

@@ -31,11 +31,4 @@ inline void ingresar_clave (std::string& clave) {
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Limpiar el buffer antes de getline, si no, explota
     std::getline(std::cin, clave ); 
 }
-inline int verificacion_clave(std::string& a , std::string& b) {
-    if (a == b) {
-        return 1; // Retorna 1 si la clave es correcta
-    } else {
-        return 0; // Retorna 0 si la clave es incorrecta
-    }
-}
 #endif // UTILS_H
