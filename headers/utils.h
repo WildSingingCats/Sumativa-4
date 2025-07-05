@@ -4,12 +4,15 @@
 
 #include <iostream>
 #include <string>
+#include <thread>
+#include <chrono>
+
 // Utilidades para el programa
 // Aqui se pueden definir funciones utilitarias que se utilizaran en el programa:
 
 inline void pause() {
     // Esta funcion pausa la ejecucion del programa y espera a que el usuario presione Enter.
-    std::cout << "Presiona Enter para continuar..." << std::endl;
+    std::cout << "\nPresione Enter para continuar..." << std::endl;
     std::cin.ignore();
 }
 inline void cls() {

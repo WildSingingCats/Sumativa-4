@@ -3,20 +3,19 @@
 #define MENU_H
 using namespace std;
 #include <iostream>
-
  
 inline void menu_principal (){                                          //MENU PRINCIPAL
     cout << "|--->-<----------------------------------------------|\n";
     cout << "|   >-<                MENU PRINCIPAL                |\n";
     cout << "|--->-<----------------------------------------------|\n";
     cout << "|   >-<                                              |\n";
-    cout << "| 1 >-< Cuenta Cliente                               |\n";
+    cout << "| 1 >-< Cliente                                      |\n";
     cout << "|   >-<                                              |\n";
     cout << "| 2 >-< Facturar                                     |\n";
     cout << "|   >-<                                              |\n";
-    cout << "| 3 >-< Inventario (Requiere clave)                  |\n";
+    cout << "| 3 >-< Inventario (Requiere Clave)                  |\n";
     cout << "|   >-<                                              |\n";
-    cout << "| 4 >-< Configuracion (Requiere Clave)               |\n";
+    cout << "| 4 >-< Configuracion                                |\n";
     cout << "|   >-<                                              |\n";
     cout << "|   >-<                                              |\n";
     cout << "|   >-<                                              |\n";
@@ -56,7 +55,7 @@ void menu_factura (){
     cout << "|   >-<                                              |\n";                            
     cout << "| 3 >-< Mostrar factura                              |\n";
     cout << "|   >-<                                              |\n";
-    cout << "|   >-<                                              |\n";
+    cout << "| 4 >-< Mostrar inventario                           |\n";
     cout << "|   >-<                                              |\n";
     cout << "|   >-<                                              |\n";
     cout << "|   >-<                                              |\n";
@@ -75,7 +74,7 @@ void menu_configuracion (){                                      //MENU CONFIGUR
     cout << "|   >-<                                              |\n";
     cout << "| 2 >-< Manual de usuario                            |\n";
     cout << "|   >-<                                              |\n";                            
-    cout << "|   >-<                                              |\n";
+    cout << "| 3 >-< Terminos y condiciones                       |\n";
     cout << "|   >-<                                              |\n";
     cout << "|   >-<                                              |\n";
     cout << "|   >-<                                              |\n";
@@ -91,5 +90,7 @@ void manual_usuario (){                                      //MENU MANUAL DE US
 // super innecesario pero ya que estamos 
     cout << "|--->-<----------------------------------------------|\n";
 }
+void terminos_condiciones (){
+    cout << "palceholder" << endl;
+}
 #endif // MENU_H
-

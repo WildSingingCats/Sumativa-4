@@ -1,6 +1,15 @@
 # Sumativa-4
 
-Escribranme por Whatssapp para agregarlos al repo
-ya no falta ivan :D
+Si se puede!!!
+Si se puede!!!
 
-esta verga es medio incomoda para trabajar pero bueno aqui vamos muchahchos :D
+lo hicimos siiiiii
+
+dora dora dora
+
+
+
+
+
+
+сука блять!
